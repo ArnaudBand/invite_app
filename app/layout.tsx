@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Irambona & Denis - Celebration of Apostleship",
-  description: "Join us for a special celebration of Irambona & Denis's apostleship.",
+  title: "Irambona Denis & Elysee - Celebration of Apostleship",
+  description: "Join us for a special celebration of Irambona Denis & Elysee's apostleship.",
 };
 
 export default function RootLayout({
