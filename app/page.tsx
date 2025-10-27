@@ -13,7 +13,6 @@ const APPWRITE_CONFIG = {
 export default function ApostlesInvitation() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     attendance: '',
     guestType: 'single',
     partnerName: ''
@@ -23,7 +22,7 @@ export default function ApostlesInvitation() {
   const [error, setError] = useState('');
 
   const handleSubmit = async () => {
-    if (!formData.name || !formData.email || !formData.attendance) {
+    if (!formData.name || !formData.attendance) {
       setError('Please fill in all required fields');
       return;
     }
@@ -141,7 +140,7 @@ export default function ApostlesInvitation() {
                 </div>
                 <div className="text-left">
                   <p className="text-sm text-gray-500 font-medium">Time</p>
-                  <p className="text-gray-800 font-semibold">TBA</p>
+                  <p className="text-gray-800 font-semibold">From 2PM to 6PM</p>
                 </div>
               </div>
             </div>
@@ -175,7 +174,7 @@ export default function ApostlesInvitation() {
               />
             </div>
 
-            <div>
+            {/* <div>
               <label className="block text-sm font-bold text-gray-700 mb-2">
                 Email Address *
               </label>
@@ -186,7 +185,7 @@ export default function ApostlesInvitation() {
                 className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition text-black bg-white"
                 placeholder="your.email@example.com"
               />
-            </div>
+            </div> */}
 
             <div>
               <label className="block text-sm font-bold text-gray-700 mb-4">
@@ -253,14 +252,14 @@ export default function ApostlesInvitation() {
                 {formData.guestType === 'couple' && (
                   <div className="animate-fade-in">
                     <label className="block text-sm font-bold text-gray-700 mb-2">
-                      Partner&apos;s Name *
+                      Epouse&apos;s Name *
                     </label>
                     <input
                       type="text"
                       value={formData.partnerName}
                       onChange={(e) => setFormData({ ...formData, partnerName: e.target.value })}
                       className="w-full px-4 py-4 text-lg border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition text-black bg-white"
-                      placeholder="Enter partner's full name"
+                      placeholder="Enter Epouse's full name"
                     />
                   </div>
                 )}
