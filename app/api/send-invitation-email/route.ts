@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: 'bandonkeyea@gmail.com',
+      to: 'denis.bsm1@gmail.com',
       subject: '✨ New RSVP: Apostles Celebration Acceptance',
       html: `
         <!DOCTYPE html>
