@@ -98,21 +98,16 @@ export default function ApostlesInvitation() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Header Card */}
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mb-6">
-          <div className="relative bg-gradient-to-br from-amber-600 via-orange-600 to-amber-700 p-8 sm:p-12 text-white text-center">
-            <div className="absolute inset-0 bg-black opacity-5"></div>
-            <div className="relative z-10">
-              <div className="mb-6">
-                <div className="inline-block p-4 bg-white bg-opacity-20 rounded-full backdrop-blur-sm">
-                  <Calendar className="w-14 h-14" />
-                </div>
-              </div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-3">You&apos;re Invited!</h1>
+          <div className="relative bg-cover bg-center p-8 sm:p-12 text-white text-center" style={{ backgroundImage: 'url(/bg_image.png)' }}>
+            <div className="absolute inset-0 bg-black opacity-40"></div>
+            <div className="relative z-10 mr-5">
+              <h1 className="text-lg sm:text-2xl font-bold mb-3">You&apos;re Invited!</h1>
               <div className="h-1 w-24 bg-white opacity-50 mx-auto mb-4"></div>
-              <p className="text-2xl sm:text-3xl text-amber-50 font-light mb-2">Celebration of Apostleship</p>
+              <p className="text-lg sm:text-2xl text-amber-50 font-light mb-2">Celebration of Apostleship</p>
               <p className="text-xl text-amber-100 font-semibold">Irambona Denis & Elysee</p>
             </div>
           </div>
@@ -270,7 +265,7 @@ export default function ApostlesInvitation() {
               type="button"
               onClick={handleSubmit}
               disabled={!formData.attendance || loading}
-              className="w-full bg-gradient-to-r from-amber-600 via-orange-600 to-amber-600 text-white font-bold text-lg py-5 rounded-xl hover:from-amber-700 hover:via-orange-700 hover:to-amber-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-[1.02] disabled:transform-none"
+              className="w-full bg-gradient-to-r from-green-600 via-green-600 to-green-600 text-white font-bold text-lg py-5 rounded-xl hover:from-green-700 hover:via-green-700 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transform hover:scale-[1.02] disabled:transform-none"
             >
               {loading ? (
                 <>
@@ -291,6 +286,6 @@ export default function ApostlesInvitation() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
