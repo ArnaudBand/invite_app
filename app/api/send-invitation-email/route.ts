@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
               background-color: #fff;
             }
             .header {
-              background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+              background: linear-gradient(135deg, #06D929FF 0%, #0CEA74FF 100%);
               color: white;
               padding: 30px;
               text-align: center;
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
             }
             .content {
               padding: 30px;
-              background-color: #fef3c7;
+              background-color: #C7FEF1FF;
               border-radius: 0 0 8px 8px;
             }
             .info-box {
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
             }
             .label {
               font-weight: bold;
-              color: #d97706;
+              color: #06D911FF;
               margin-bottom: 5px;
             }
             .value {
