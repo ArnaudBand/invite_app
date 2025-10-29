@@ -39,20 +39,19 @@ export default function ApostlesInvitation() {
       // Save to Appwrite
       // In production, replace with actual Appwrite SDK calls
 
-      // Send email notification if accepted
-      if (formData.attendance === 'accept') {
-        const response = await fetch('/api/send-invitation-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
-        });
 
-        if (!response.ok) {
-          throw new Error('Failed to send email notification');
-        }
+      const response = await fetch('/api/send-invitation-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email notification');
       }
+
 
       await new Promise(resolve => setTimeout(resolve, 1500));
       setSubmitted(true);
